@@ -94,3 +94,9 @@ function getDataUserLocal()
         alert( "Please make sure that the data is entered correctly");
     }  
 }
+
+
+function ExitPage()
+{
+    location.assign("../index.html");
+}
