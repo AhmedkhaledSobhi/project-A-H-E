@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sginIn A-H-E</title>
+    <link rel="icon"  href="../img/7-78984_brown-sugar-clipart-png-transparent-cartoons-brown-sugar.svg" type="image/xl-icon">
+    <link rel="stylesheet" href="../Css/all.min.css">
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Css/styleForm.css">
+</head>
+<body>
+    <section id="login" class="login-full d-flex justify-content-center">
+        <form class=" w-50 text-center ">
+            <div class="login-h py-5">
+                <h1 class=" text-white text-capitalize py-3">Sign In</h1>
+            </div>
+            <div class="d-flex flex-column justify-content-center px-3 mt-3"> 
+                <input id="EmailLogin"  class="fs-4 form-control bg-transparent rounded-pill" type="email" placeholder="Enter Your email">
+                
+                <input id="passLogin" class="fs-4 form-control bg-transparent rounded-pill" type="password" placeholder="Enter Your password">
+                <div class="text-start mx-4">
+                    <input id="ShowPasswordLogin" onclick="hidePassLogin()" type="checkbox" class="me-2"> <label for="ShowPasswordLogin">Show password</label>
+                </div>  
+                <a id="login" onclick="getDataUserLocal()" class="btn login-btn fs-4 rounded-pill" > Login</a> 
+                
+                <p class="login-p text-center fs-4">Don't have an account ?
+                    <a class="signUp-text fs-4" onclick="SignUP()" href="../index.html">Sign Up</a>
+                </p>
+            </div>
+       
+        </form>
+    </section>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/form.js"></script>
+</body>
+</html>

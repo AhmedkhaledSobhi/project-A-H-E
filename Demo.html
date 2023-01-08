@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Marketing A-H-E</title>
+    <link rel="icon"  href="img/7-78984_brown-sugar-clipart-png-transparent-cartoons-brown-sugar.svg" type="image/xl-icon">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/slider.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    
+    <section id="loadingScrean" class=" justify-content-center align-items-center">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg bg-lht fixed-top">
+        <div class="container">
+            <!-- Cart -->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!-- cart-content -->
+                <div class="cartcontent">
+
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <!-- buy-button -->
+                <button class="btn-buy btn btn-outline-warning">Buy Now</button>
+                <!-- cart close -->
+                <i class="fa-solid fa-xmark"id="close-cart"></i>
+            </div>
+
+          <a class="navbar-brand" href="#">
+            <img class="w-25 rounded-pill" src="img/ITI+thumpnail.jpg" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+
+            <ul class="navbar-nav me-auto  mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link fs-5"  href="#Phone">Phone</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Laptop">Laptop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Fragrance">Fragrance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Skincare">Skincare</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Groceries">Groceries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Home">Home-Decoration</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input oninput="SearchProduct(this.value)" class="form-control m-" type="search" placeholder="Search by name brand" aria-label="Search">
+                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+            </form>
+
+            <div class=" d-flex align-items-center">
+                <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                <button onclick="ExitPage()" class="btn btn-outline-danger">log Out</button>
+            </div>
+            
+          </div>
+        </div>
+    </nav>
+
+<!-- ============================================================================= -->
+    <section id=" slids" >
+        <div class=" container slider">
+            <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+              <input type="radio" name="radio-btn" id="radio3">
+              <input type="radio" name="radio-btn" id="radio4">
+    
+              <div class="slide frist">
+                <img src="img/immg1.jpg" alt="img" >
+              </div>
+    
+              <div class="slide">
+                <img src="img/immg4.jpeg" alt="img" >
+              </div>
+    
+              <div class="slide">
+                <img src="img/immg1.jpg" alt="img" >
+              </div>
+    
+              <div class="slide">
+                <img src="img/immg4.jpeg" alt="img" >
+              </div>
+    
+    
+              <!-- auto start -->
+              <div class="start-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+              </div>
+            </div>
+            <!-- manual  -->
+            <div class="manual-start">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    </section> 
+<!-- ================================================================================ -->
+
+    <section id="SEARCHs" class=" mt-3  media mb-1 py-0  ">
+        <div class="container shadow-lg ">
+            <div id="SEARCH" class=" row row-cols-1 row-cols-md-3  g-3 justify-content-center">
+        
+            </div>
+        </div>
+    </section>
+
+<!-- ============================================================================= -->
+
+    <section id="Phone" class=" mt-5 media mb-1 py-4  ">
+        <div class="container shadow-lg pb-3">
+            <div id="ProductPhone" class=" row row-cols-1 row-cols-md-3  g-3 justify-content-center">
+           
+            </div>
+        </div>
+    </section>
+
+<!-- ================================================================================== -->
+
+    <section id="Laptop" class="media my-1 py-4 ">
+        <div class="container shadow-lg pb-3">
+            <div id="ProductLaptop" class=" row row-cols-1 row-cols-md-3  g-3 justify-content-center">
+        
+            </div>
+        </div>
+    </section>
+
+<!-- ============================================================================================== -->
+
+    <section id="Fragrance" class="media my-1 py-4 ">
+        <div class="container shadow-lg pb-3">
+            <div id="ProductFragrance" class=" row row-cols-1 row-cols-md-3  g-3 justify-content-center">
+                
+            </div>
+        </div>
+    </section>
+<!-- ================================================================================================ -->
+    <section id="Groceries" class="media my-1 py-4 ">
+        <div class="container shadow-lg pb-3">
+            <div id="ProductGroceries" class=" row row-cols-1 row-cols-md-3  g-3 justify-content-center">
+                
+            </div>
+        </div>
+    </section>
+
+<!-- =============================================================================== -->
+
+    <section id="Skincare" class="media my-1 py-4 ">
+        <div class="container shadow-lg pb-3">
+            <div id="ProductSkincare" class=" row row-cols-1 row-cols-md-3 gx-3 justify-content-center">
+                
+            </div>
+        </div>
+    </section>
+<!-- =================================================================================================== -->
+    
+    <section id="Home" class="media my-1 py-4 ">
+        <div class="container shadow-lg pb-3">
+            <div id="ProductHome" class=" row row-cols-1 row-cols-md-3  g-3  justify-content-center">
+                
+            </div>
+        </div>
+    </section>
+
+<!-- ======================= footer ============================ -->
+
+    <footer >
+        <div class="footer">
+        <div class="footer-section">
+            <h4>Group 6</h4>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-fire"></i>Esraa Mokhtar</a></li>
+                <li><a href="#"><i class="fa-solid fa-fire"></i>Haitham Mohsen</a></li>
+                <li><a href="#"><i class="fa-solid fa-fire"></i>Ahmed Khaled</a></li>
+                <li><a href="#"><i class="fa-solid fa-fire"></i>Engy Mohammed</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Get Help</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment options</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Online Shop</h4>
+            <ul class="">
+                <li><a href="#Phone">Phone</a></li>
+                <li><a href="#Laptop"> Laptop</a></li>
+                <li><a href="#Fragrance"> Fragrance</a></li>
+                <li><a href="#Skincare"> Skincare</a></li>
+                <li><a href="#Groceries"> Groceries</a></li>
+                <li><a href="#Home"> Home-Decoration</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="follow-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/AhmedKh67268471"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottem">
+        Copywrite &copy; Group 6 and ITI 
+        </div>
+        </div>
+    </footer>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+:root
+{
+    --main-Color: #FFFFFF !important;
+    --second-Color:#243763 !important ;
+}
+.login-full{
+    height: 100vh;
+    background-color: var(--main-Color);
+}
+
+form{
+    margin: 3rem 0;
+    background-color:var(--main-Color);
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    border-radius: 40px !important;
+}
+
+form input{
+    margin-top: 20px;
+    
+}
+
+.login-btn {
+    width: 100%;
+    margin: 20px auto; 
+    background-color: var(--main-Color);
+    color: var(--second-Color);
+    border: 1px solid var(--second-Color) !important;
+    
+}
+
+.login-btn:hover{
+
+    background-color: var(--second-Color);
+    color: var(--main-Color);
+    border: 1px solid var(--main-Color) !important;
+    
+}
+.login-h{
+    background-color: var(--second-Color);
+    border-top-right-radius: 40px !important;
+    border-top-left-radius: 40px !important;
+}
+
+.login-p a{
+    text-decoration: none;
+    color: var(--second-Color) !important;
+}
+
+.login-p a:hover{
+    text-decoration:underline;
+}
+
+
+@media (max-width: 767.98px)
+{
+
+    form
+    {
+        margin: 1rem 0;
+    }
+    section .w-50
+    {
+        width: 85% !important  ;
+    }
+    .login-full>form p
+    {
+        font-size: 19px !important;
+    }
+    .login-full>form p a
+    {
+        font-size: 18px  !important;
+    }
+    #login>form h1
+    {
+        padding: 3px 0px !important;
+    }
+}

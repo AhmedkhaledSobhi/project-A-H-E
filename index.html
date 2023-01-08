@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sginUp A-H-E</title>
+    <link rel="icon"  href="img/7-78984_brown-sugar-clipart-png-transparent-cartoons-brown-sugar.svg" type="image/xl-icon">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/styleForm.css">
+</head>
+<body>
+    <section  class="login-full d-flex justify-content-center">
+        <form action="./LoginAndRegister/signIn.html"  class=" w-50 text-center ">
+            <div class="login-h py-5">
+                <h1 class=" text-white text-capitalize "> Sign up </h1>
+                <br>
+            </div>
+            <div class="d-flex flex-column justify-content-center px-3 mt-3">  
+                <input id="Name" class="fs-4 form-control bg-transparent rounded-pill" type="text" placeholder="Enter Your name">
+
+                <input id="Email" class="fs-4 form-control bg-transparent rounded-pill" type="email" placeholder="Enter Your email">
+
+                <input id="PassWord" class="fs-4 form-control bg-transparent rounded-pill" type="password" placeholder="Enter Your password">
+               
+                <div class="text-start mx-4">
+                    <input id="ShowPassword" onclick="hidePass()" type="checkbox" class="me-2"> <label for="ShowPassword">Show password</label>
+                </div>
+                
+                <a onclick="sentDataUserLocal()" class="btn login-btn fs-4 rounded-pill" >Register</a>
+                
+                <p class="login-p text-center fs-4">You have an account ?
+                    <a class="fs-4" onclick="SignIn()" href="LoginAndRegister\signIn.html">Sign In</a>
+                </p>
+            </div>
+        </form>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
