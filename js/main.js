@@ -396,7 +396,7 @@ function Home()
 
 function ExitPage()
 {
-    location.assign("../index.html");
+    location.replace("../index.html");
 } 
 
 // ==========================loding screan ================================================
