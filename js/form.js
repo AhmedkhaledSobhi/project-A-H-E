@@ -37,7 +37,7 @@ function sentDataUserLocal()
         }
         arrayDataUser.push(dataUser);
         localStorage.setItem("New_User", JSON.stringify(arrayDataUser));
-        let loc= location.assign("../Demo.html");
+        location.assign("../Demo.html");
     }
     else
     {
@@ -85,7 +85,7 @@ function getDataUserLocal()
                 alert(`welcom ${ GetName}`)
                 // document.getElementById("login").setAttribute("href","LoginAndRegister/Demo.html" );
                let loc= location.assign("../Demo.html");
-               console.log(loc);
+            //    console.log(loc);
             }  
         }
     }
