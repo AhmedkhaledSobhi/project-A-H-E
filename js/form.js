@@ -37,7 +37,7 @@ function sentDataUserLocal()
         }
         arrayDataUser.push(dataUser);
         localStorage.setItem("New_User", JSON.stringify(arrayDataUser));
-        location.assign("./Demo.html");
+        let loc= location.assign("../Demo.html");
     }
     else
     {
