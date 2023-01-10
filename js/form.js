@@ -37,7 +37,7 @@ function sentDataUserLocal()
         }
         arrayDataUser.push(dataUser);
         localStorage.setItem("New_User", JSON.stringify(arrayDataUser));
-        let loc= location.assign("../Demo.html");
+        let loc= location.assign("../LoginAndRegister/signIn.html");
         // console.log( loc);
     }
     else
@@ -99,5 +99,5 @@ function getDataUserLocal()
 
 function ExitPage()
 {
-    location.assign("../index.html");
+    location.assign("./index.html");
 }

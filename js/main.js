@@ -37,7 +37,7 @@ function SearchProduct(e)
                             <div class="card-footer">
                                 <div class="d-flex justify-content-between">
                                     <h6  class="title-products">${data[i].title}</h6>
-                                    <p> price : <span class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
+                                    <p> price : <span  id="${data[i].id}" class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
                                 </div>
                 
                                 <div class="d-flex justify-content-between">
@@ -79,7 +79,7 @@ function getDatajson()
             var Response=HttpRequestPage.response;
             var dataParse=JSON.parse(Response);
             data=dataParse.products;
-            // console.log(data);
+            console.log(data);
             Phone();
             laptop();
             Fragrance();
@@ -115,15 +115,14 @@ function Phone()
                 <img id="img-top" src="${data[i].thumbnail}" class="card-img-top mx-auto" alt="...">
             </div>
 
-           
-
+    
             <div class="card-body">
               <p class="card-text">${data[i].description}</p>
             </div>
             <div class="card-footer">
                 <div class="d-flex justify-content-between">
                     <h6  class="title-products">${data[i].title}</h6>
-                    <p> price : <span class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
+                    <p> price : <span id="${data[i].id}" class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -138,7 +137,7 @@ function Phone()
                 </div>
 
             </div>
-            <i  onclick="testX(this)" class="fa-solid fa-cart-plus " id="cart-plus"></i>
+            <i ${data[i].id } onclick="testX(this)" class="fa-solid fa-cart-plus " id="cart-plus"></i>
 
           </div>
         </div>  `
@@ -174,7 +173,7 @@ function laptop()
             <div class="card-footer">
                 <div class="d-flex justify-content-between">
                     <h6  class="title-products">${data[i].title}</h6>
-                    <p> price : <span class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
+                    <p> price : <span  id="${data[i].id}" class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -225,7 +224,7 @@ function Fragrance()
             <div class="card-footer">
                 <div class="d-flex justify-content-between">
                     <h6  class="title-products">${data[i].title}</h6>
-                    <p> price : <span class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
+                    <p> price : <span  id="${data[i].id}" class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -273,7 +272,7 @@ function skincare()
             <div class="card-footer">
                 <div class="d-flex justify-content-between">
                     <h6  class="title-products">${data[i].title}</h6>
-                    <p> price : <span class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
+                    <p> price : <span  id="${data[i].id}" class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -321,7 +320,7 @@ function groceries()
             <div class="card-footer">
                 <div class="d-flex justify-content-between">
                     <h6 class="title-products">${data[i].title}</h6>
-                    <p> price : <span class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
+                    <p> price : <span  id="${data[i].id}" class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -368,7 +367,7 @@ function Home()
             <div class="card-footer">
                 <div class="d-flex justify-content-between">
                     <h6  class="title-products">${data[i].title}</h6>
-                    <p> price : <span class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
+                    <p> price : <span  id="${data[i].id}" class="price-amount"> ${data[i].price}<i class="fa-solid fa-sack-dollar fa-4 text-secondary"></i> </span> </p>
                 </div>
 
                 <div class="d-flex justify-content-between">
@@ -451,8 +450,8 @@ function ready1(){
     // console.log(addCart);
     for(var i = 0 ; i < addCart.length;i++ ){
         var button = addCart[i];
-        // button.addEventListener("click", testX)
 
+        // button.addEventListener("click", testX)
     }  
     //btn-buy work
     document.getElementsByClassName("btn-buy")[0].addEventListener("click",buyButtonClicked);
@@ -472,35 +471,15 @@ function removeCarItem(event){
     var buttonClicked= event.target;
     buttonClicked.parentElement.remove();
     updatetotal();
-
 }
 //quantity changed
 function quantityChanged(event){
     var input = event.target
-    if(isNaN(input.value)||input.value <= 0){
+    if(isNaN(input.value)||input.value <= 0 ){
         input.value = 1
     }
     updatetotal();
 }
-//Add To Cart
-// var title = document.getElementsByClassName("title-products")
-// console.log(title);
-// var button2 = event.target
-// var shopProducts =parentElement;
-// var title2 = shopProducts.parentElement.getElementsByClassName("title-products")[0].innerText;
-// console.log(title2);
-// var titleramy = document.getElementsByClassName("title-products");
-// console.log(titleramy);
-// function addCartClicked(event) {
-    
-//     var button = event.target
-//     var shopProducts = button.parentElement;
-//     var titleramy = shopProducts.getElementsByClassName("title-products")[0].innerText;
-//     console.log(titleramy);
-    
-// }
-
-// addCartClicked();
  
 function testX(event)
 {
@@ -508,33 +487,33 @@ function testX(event)
     var shopProducts = button.parentElement;
     // console.log(shopProducts);
      var titleramy = shopProducts.getElementsByClassName("title-products")[0].innerText;
-     
+     var xx=shopProducts.getElementsByClassName("price-amount")[0].id;
      var priceAmount = shopProducts.getElementsByClassName("price-amount")[0].innerText;
      var imgP = shopProducts.getElementsByClassName("card-img-top mx-auto")[0].src;
-     console.log(imgP);
+    //  console.log(imgP);
 
-    addProductToCart(titleramy,priceAmount,imgP);
+    addProductToCart(titleramy,priceAmount,imgP,xx);
     updatetotal();
     
 }
 //////////
-function addProductToCart(titleramy,priceAmount,imgP){
+
+function addProductToCart(titleramy,priceAmount,imgP,idX){
+    
     var cartShopBox = document.createElement("div");
     cartShopBox.classList.add("cart-box");
     var cartItems = document.getElementsByClassName("cartcontent")[0]
     var cartItemNames = document.getElementsByClassName("card-product-title")
-    for(var i =0; i < cartItemNames.length; i++){
-        console.log(cartItemNames[i].innerText);
-            console.log(titleramy);
+    for(var i =0; i < cartItemNames.length; i++)
+    {
+        let ax =document.getElementById(idX).id;
+        let counters=Number(document.getElementById(ax).value);
         if(cartItemNames[i].innerText==titleramy)
         {
-            console.log(cartItemNames[i].innerText);
-            console.log(titleramy);
-        alert("You have alredy add this item to cart")
-        
-        return;
+            // alert("You have alredy add this item to cart")
+            document.getElementById(ax).value=counters+1;
+            return;
         }
-        // return;
     }
  ///
  var CartBoxContent = `
@@ -542,7 +521,7 @@ function addProductToCart(titleramy,priceAmount,imgP){
     <div class="detail-box">
     <div class="card-product-title">${titleramy}</div>
     <div class="cart-price">$${priceAmount}</div>
-    <input type="number" value="1" class="cart-quantity">
+    <input id="${idX}" type="number" value="1" class="cart-quantity">
     </div>
     <!-- remove cart -->
     <i class="fa-solid fa-trash" id="trash"></i>`;
@@ -554,8 +533,6 @@ function addProductToCart(titleramy,priceAmount,imgP){
 
 }
 /////
-
-
 
 
 ////////// update total
