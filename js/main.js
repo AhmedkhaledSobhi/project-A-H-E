@@ -79,7 +79,6 @@ function getDatajson()
             var Response=HttpRequestPage.response;
             var dataParse=JSON.parse(Response);
             data=dataParse.products;
-            console.log(data);
             Phone();
             laptop();
             Fragrance();
@@ -396,14 +395,15 @@ function Home()
  
 
 // ==========================loding screan ================================================
-
+       let audio= document.getElementById("Ayat");
+       audio.play()
     $(document).ready(function ()
     {
         $('#loadingScrean .spinner').fadeOut(1500, function () {
-        $('#loadingScrean').fadeOut(2000 ,function () {
-            $('body').css('overflow-y','auto')
-            $('#loadingScrean').remove()
-        })
+            $('#loadingScrean').fadeOut(2000 ,function () {
+                $('body').css('overflow-y','auto')
+                $('#loadingScrean').remove()
+            })
         })
     })
 // ======================================================================
@@ -429,7 +429,8 @@ if(document.readyState=="loading"){
 }else{
   ready1();
 }
-//////
+
+//==============================================================
 
 function ready1(){
     //remove item 
@@ -450,8 +451,6 @@ function ready1(){
     // console.log(addCart);
     for(var i = 0 ; i < addCart.length;i++ ){
         var button = addCart[i];
-
-        // button.addEventListener("click", testX)
     }  
     //btn-buy work
     document.getElementsByClassName("btn-buy")[0].addEventListener("click",buyButtonClicked);
@@ -496,7 +495,7 @@ function testX(event)
     updatetotal();
     
 }
-//////////
+// =============================================================================
 
 function addProductToCart(titleramy,priceAmount,imgP,idX){
     
@@ -532,10 +531,10 @@ function addProductToCart(titleramy,priceAmount,imgP,idX){
     cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener("change",quantityChanged);
 
 }
-/////
 
 
-////////// update total
+//============================ update total ========================================================
+
 function updatetotal(){
     var cartContent= document.getElementsByClassName("cartcontent")[0];
     var cartBoxes = cartContent.getElementsByClassName("cart-box");

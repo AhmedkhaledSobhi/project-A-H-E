@@ -84,9 +84,8 @@ function getDataUserLocal()
             if (getEmail==Email && getPassword==pass)
             {
                 alert(`welcom ${ GetName}`)
-                // document.getElementById("login").setAttribute("href","LoginAndRegister/Demo.html" );
-               let loc= location.assign("../Demo.html");
-            //    console.log(loc);
+                let loc= location.assign("../Demo.html");
+                // console.log(loc);
             }  
         }
     }
